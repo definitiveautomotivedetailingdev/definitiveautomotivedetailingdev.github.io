@@ -1,8 +1,7 @@
 
 import React, { useEffect } from "react";
 import BookingCalendar from "@/components/BookingCalendar";
-import { Clock, CheckCircle, Headphones, MoveRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Clock, CheckCircle, Car, MoveRight, Phone, Mail } from "lucide-react";
 
 const Booking = () => {
   // Scroll to top on page load
@@ -13,23 +12,23 @@ const Booking = () => {
   const bookingSteps = [
     {
       icon: <Calendar className="h-8 w-8" />,
-      title: "Select a Date & Time",
+      title: "Select Date & Time",
       description: "Choose your preferred date and time from our availability calendar."
     },
     {
-      icon: <MessageSquare className="h-8 w-8" />,
-      title: "Tell Us About Your Event",
-      description: "Provide details about your event type, venue, and specific requirements."
+      icon: <Car className="h-8 w-8" />,
+      title: "Tell Us About Your Vehicle",
+      description: "Provide details about your vehicle type and any specific services needed."
     },
     {
-      icon: <Headphones className="h-8 w-8" />,
+      icon: <Phone className="h-8 w-8" />,
       title: "Consultation Call",
-      description: "Our team will contact you to discuss your needs in detail."
+      description: "Our team will contact you to discuss your detailing needs in detail."
     },
     {
       icon: <CheckCircle className="h-8 w-8" />,
       title: "Confirmation",
-      description: "Receive your booking confirmation and prepare for an amazing event."
+      description: "Receive your appointment confirmation and prepare for exceptional service."
     }
   ];
 
@@ -39,9 +38,9 @@ const Booking = () => {
       <section className="bg-psyco-black-light py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">Book Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">Book Your Detailing Appointment</h1>
             <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
-              Ready to elevate your event with professional sound and lighting? Use our simple booking process to secure your date.
+              Ready to give your vehicle the care it deserves? Use our simple booking system to schedule your professional detailing service.
             </p>
           </div>
         </div>
@@ -53,7 +52,7 @@ const Booking = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-2">How Booking Works</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Our simple four-step process makes booking our services easy
+              Our simple four-step process makes scheduling your detailing service easy
             </p>
           </div>
           
@@ -61,7 +60,7 @@ const Booking = () => {
             {bookingSteps.map((step, index) => (
               <div
                 key={index}
-                className="glassmorphism p-6 text-center animate-fade-in"
+                className="glassmorphism p-6 text-center animate-fade-in relative"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-psyco-green-DEFAULT mb-4 flex justify-center">
@@ -85,9 +84,9 @@ const Booking = () => {
       <section className="py-16 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-2">Select a Date & Time</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">Select Your Appointment</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Choose from our available slots and tell us about your event
+              Choose from our available slots and let us know about your vehicle and service preferences
             </p>
           </div>
           
@@ -101,7 +100,7 @@ const Booking = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-2">Frequently Asked Questions</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Common questions about our booking process and services
+              Common questions about our detailing services and booking process
             </p>
           </div>
           
@@ -109,27 +108,27 @@ const Booking = () => {
             {[
               {
                 question: "How far in advance should I book?",
-                answer: "We recommend booking at least 4-6 weeks in advance for standard events, and 2-3 months for large events or peak season dates (May-September and December)."
+                answer: "We recommend booking at least 1-2 weeks in advance, especially during peak seasons (spring and summer). However, we often have same-week availability."
               },
               {
-                question: "Is a deposit required to secure a booking?",
-                answer: "Yes, a 30% deposit is required to secure your booking. The remaining balance is due one week before your event date."
+                question: "How long does a typical detailing service take?",
+                answer: "Service time varies by package: basic wash (1-2 hours), full detail (4-6 hours), paint correction (6-8 hours), ceramic coating (1-2 days)."
               },
               {
-                question: "What happens after I submit my booking request?",
-                answer: "Our team will review your request and contact you within 24-48 hours to discuss details and provide a customized quote."
+                question: "Do I need to be present during the service?",
+                answer: "No, you can drop off your vehicle and pick it up when convenient. We'll contact you when the service is complete."
               },
               {
-                question: "Do you provide all necessary equipment?",
-                answer: "Yes, we provide all sound and lighting equipment needed for your event, including setup, operation, and teardown."
+                question: "What's included in your detailing packages?",
+                answer: "Each package varies, but typically includes exterior wash, interior cleaning, tire shine, and window cleaning. Premium packages add paint correction, protection, and more."
               },
               {
-                question: "Can I modify my booking after confirmation?",
-                answer: "Yes, modifications can be made up to 2 weeks before your event, subject to equipment and staff availability."
+                question: "Do you work on all vehicle types?",
+                answer: "Yes, we detail all types of vehicles including cars, trucks, SUVs, motorcycles, and RVs. Each service is tailored to your specific vehicle."
               },
               {
-                question: "What is your cancellation policy?",
-                answer: "Cancellations made 30+ days before the event receive a full deposit refund. Cancellations within 14-30 days receive a 50% deposit refund. Cancellations under 14 days are non-refundable."
+                question: "What's your cancellation policy?",
+                answer: "We require 24-48 hours notice for cancellations. Same-day cancellations may incur a fee. Rescheduling is always welcome with advance notice."
               }
             ].map((faq, index) => (
               <div 
@@ -151,25 +150,25 @@ const Booking = () => {
           <div className="glassmorphism p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Need to Speak With Us Directly?</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Prefer to Call or Email?</h2>
                 <p className="text-gray-300 mb-6">
-                  If you have specific questions or prefer to discuss your requirements over the phone, our team is here to help.
+                  If you have specific questions about our services or prefer to discuss your vehicle's needs directly, we're here to help.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">+44 123 456 7890</span>
+                    <span className="text-white">(555) 123-4567</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">booking@psycotikcrew.com</span>
+                    <span className="text-white">info@definitiveautomotivedetailing.ca</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
                     <Clock className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">Mon-Fri: 9am-6pm | Sat: 10am-4pm</span>
+                    <span className="text-white">Mon-Fri: 8am-6pm | Sat: 9am-5pm | Sun: 10am-4pm</span>
                   </div>
                 </div>
               </div>
@@ -180,8 +179,8 @@ const Booking = () => {
                     <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Emergency Support</h3>
-                    <p className="text-gray-300">24/7 support line for existing bookings</p>
+                    <h3 className="text-lg font-medium text-white mb-1">Free Consultations</h3>
+                    <p className="text-gray-300">Discuss your vehicle's needs with our experts</p>
                   </div>
                 </div>
                 
@@ -191,7 +190,7 @@ const Booking = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Custom Packages</h3>
-                    <p className="text-gray-300">Speak with our team about bespoke solutions</p>
+                    <p className="text-gray-300">Tailored services for your specific requirements</p>
                   </div>
                 </div>
                 
@@ -200,8 +199,8 @@ const Booking = () => {
                     <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Site Visits</h3>
-                    <p className="text-gray-300">Request a venue assessment before your event</p>
+                    <h3 className="text-lg font-medium text-white mb-1">Mobile Service</h3>
+                    <p className="text-gray-300">We can come to your location for added convenience</p>
                   </div>
                 </div>
               </div>
@@ -213,7 +212,7 @@ const Booking = () => {
   );
 };
 
-// Add Calendar and MessageSquare components for the icons
+// Add Calendar component for the icons
 const Calendar = ({ className }: { className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -231,58 +230,6 @@ const Calendar = ({ className }: { className?: string }) => (
     <line x1="16" x2="16" y1="2" y2="6" />
     <line x1="8" x2="8" y1="2" y2="6" />
     <line x1="3" x2="21" y1="10" y2="10" />
-  </svg>
-);
-
-const MessageSquare = ({ className }: { className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="24" 
-    height="24" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-  </svg>
-);
-
-const Phone = ({ className }: { className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="24" 
-    height="24" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-  </svg>
-);
-
-const Mail = ({ className }: { className?: string }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="24" 
-    height="24" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <rect width="20" height="16" x="2" y="4" rx="2" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
 

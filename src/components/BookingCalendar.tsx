@@ -4,6 +4,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
 import { 
   Select,
   SelectContent,
@@ -16,27 +17,41 @@ import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 
 const availableTimeSlots = [
-  '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-  '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM',
-  '5:00 PM', '6:00 PM', '7:00 PM'
+  '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
+  '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
 ];
 
-const eventTypes = [
-  'Concert', 'Corporate Event', 'Wedding', 'Birthday Party',
-  'Festival', 'Conference', 'Club Night', 'Private Party',
-  'Other'
+const vehicleTypes = [
+  'Sedan', 'SUV', 'Truck', 'Coupe', 'Convertible', 
+  'Hatchback', 'Wagon', 'Van', 'Motorcycle', 'RV/Motorhome'
+];
+
+const additionalServices = [
+  'Paint Correction',
+  'Ceramic Coating',
+  'Paint Protection Film (PPF)',
+  'Window Tinting',
+  'Headlight Restoration',
+  'Engine Bay Cleaning',
+  'Leather Conditioning',
+  'Odor Removal',
+  'Pet Hair Removal',
+  'Scratch Removal',
+  'Wheel & Tire Detailing',
+  'Chrome Polishing'
 ];
 
 const BookingCalendar = () => {
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [timeSlot, setTimeSlot] = useState<string>('');
-  const [eventType, setEventType] = useState<string>('');
+  const [vehicleType, setVehicleType] = useState<string>('');
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    location: '',
-    details: ''
+    vehicleDetails: '',
+    additionalDetails: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -44,13 +59,21 @@ const BookingCalendar = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleServiceToggle = (service: string) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!date || !timeSlot || !eventType) {
+    if (!date || !timeSlot || !vehicleType) {
       toast({
         title: "Missing information",
-        description: "Please select a date, time slot, and event type",
+        description: "Please select a date, time slot, and vehicle type",
         variant: "destructive"
       });
       return;
@@ -60,25 +83,27 @@ const BookingCalendar = () => {
     console.log({
       date: date ? format(date, 'yyyy-MM-dd') : '',
       timeSlot,
-      eventType,
+      vehicleType,
+      selectedServices,
       ...formData
     });
 
     toast({
       title: "Booking request submitted!",
-      description: `We'll contact you soon to confirm your ${eventType} on ${format(date, 'MMMM dd, yyyy')} at ${timeSlot}.`,
+      description: `We'll contact you soon to confirm your ${vehicleType} detailing on ${format(date, 'MMMM dd, yyyy')} at ${timeSlot}.`,
     });
 
     // Reset form
     setDate(undefined);
     setTimeSlot('');
-    setEventType('');
+    setVehicleType('');
+    setSelectedServices([]);
     setFormData({
       name: '',
       email: '',
       phone: '',
-      location: '',
-      details: ''
+      vehicleDetails: '',
+      additionalDetails: ''
     });
   };
 
@@ -115,13 +140,13 @@ const BookingCalendar = () => {
         </div>
         
         <div className="mt-4">
-          <label className="block text-gray-300 mb-2">Event Type</label>
-          <Select value={eventType} onValueChange={setEventType}>
+          <label className="block text-gray-300 mb-2">Vehicle Type</label>
+          <Select value={vehicleType} onValueChange={setVehicleType}>
             <SelectTrigger className="bg-psyco-black-DEFAULT border-psyco-green-muted/50">
-              <SelectValue placeholder="Select event type" />
+              <SelectValue placeholder="Select vehicle type" />
             </SelectTrigger>
             <SelectContent className="bg-psyco-black-light border-psyco-green-muted/50">
-              {eventTypes.map(type => (
+              {vehicleTypes.map(type => (
                 <SelectItem key={type} value={type}>{type}</SelectItem>
               ))}
             </SelectContent>
@@ -132,7 +157,7 @@ const BookingCalendar = () => {
       <div className="glassmorphism p-6 animate-fade-in animation-delay-100">
         <div className="flex items-center space-x-2 mb-4">
           <MessageSquare className="h-5 w-5 text-psyco-green-DEFAULT" />
-          <h3 className="text-xl font-medium">Contact Information</h3>
+          <h3 className="text-xl font-medium">Contact & Service Information</h3>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -174,27 +199,50 @@ const BookingCalendar = () => {
           </div>
           
           <div>
-            <label htmlFor="location" className="block text-gray-300 mb-1">Event Location</label>
+            <label htmlFor="vehicleDetails" className="block text-gray-300 mb-1">Vehicle Details (Year, Make, Model)</label>
             <Input
-              id="location"
-              name="location"
-              value={formData.location}
+              id="vehicleDetails"
+              name="vehicleDetails"
+              value={formData.vehicleDetails}
               onChange={handleInputChange}
               required
               className="bg-psyco-black-light border-psyco-green-muted/50"
+              placeholder="e.g., 2020 BMW X5"
             />
           </div>
           
           <div>
-            <label htmlFor="details" className="block text-gray-300 mb-1">Event Details</label>
+            <label className="block text-gray-300 mb-2">Additional Services</label>
+            <div className="grid grid-cols-1 gap-2 max-h-40 overflow-y-auto">
+              {additionalServices.map(service => (
+                <div key={service} className="flex items-center space-x-2">
+                  <Checkbox
+                    id={service}
+                    checked={selectedServices.includes(service)}
+                    onCheckedChange={() => handleServiceToggle(service)}
+                    className="border-psyco-green-muted/50"
+                  />
+                  <label 
+                    htmlFor={service} 
+                    className="text-sm text-gray-300 cursor-pointer"
+                  >
+                    {service}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <label htmlFor="additionalDetails" className="block text-gray-300 mb-1">Additional Details</label>
             <Textarea
-              id="details"
-              name="details"
+              id="additionalDetails"
+              name="additionalDetails"
               rows={3}
-              value={formData.details}
+              value={formData.additionalDetails}
               onChange={handleInputChange}
               className="bg-psyco-black-light border-psyco-green-muted/50"
-              placeholder="Please provide any specific requirements or details about your event"
+              placeholder="Any specific requests or concerns about your vehicle"
             />
           </div>
           
