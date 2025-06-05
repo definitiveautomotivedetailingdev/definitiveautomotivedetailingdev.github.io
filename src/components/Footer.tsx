@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Mail, Facebook, Instagram, Youtube, Phone, MapPin } from 'lucide-react';
+import { Mail, Facebook, Instagram, Youtube, Phone, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -115,25 +115,36 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3 text-gray-300">
                 <Phone size={16} className="text-green-500" />
-                <span>(555) 123-4567</span>
+                <span>(416) 275-1179</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <Mail size={16} className="text-green-500" />
-                <span>info@definitiveautomotivedetailing.ca</span>
+                <span>definitiveautomotivedetailing@outlook.com</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
-                <MapPin size={16} className="text-green-500" />
-                <span>Your City, Province</span>
+                <Clock size={16} className="text-green-500" />
+                <span>8am to 10pm, 7 days a week</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <Facebook size={16} className="text-green-500" />
                 <a 
-                  href="https://definitiveautomotivedetailing.ca" 
+                  href="https://facebook.com/definitiveautomotivedetails" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-green-400 transition-colors"
                 >
-                  definitiveautomotivedetailing.ca
+                  Definitive Automotive Details
+                </a>
+              </li>
+              <li className="flex items-center space-x-3 text-gray-300">
+                <Instagram size={16} className="text-green-500" />
+                <a 
+                  href="https://www.instagram.com/definitiveautomotivedetailing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-green-400 transition-colors"
+                >
+                  @definitiveautomotivedetailing
                 </a>
               </li>
             </ul>

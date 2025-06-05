@@ -38,7 +38,7 @@ const HeroSection = () => {
           Example: <source src="/your-video-file.mp4" type="video/mp4" />
           For now, this will show a black background since no video is provided
         */}
-        <source src="/placeholder-video.mp4" type="video/mp4" />
+        <source src="/public/home-page-video.mp4" type="video/mp4" />
       </video>
       
       {/* Dark Overlay */}
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <img 
                   src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
                   alt="Definitive Automotive Detailing Logo" 
-                  className="h-96 w-auto object-contain" 
+                  className="h-[32rem] w-auto object-contain" 
                 />
               </div>
             </div>
@@ -79,13 +79,12 @@ const HeroSection = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="bg-definitive-red/20 text-definitive-red rounded-full px-4 py-1 text-sm font-medium inline-flex items-center">
                 <Sparkles className="h-3.5 w-3.5 mr-1" />
-                Premium Automotive Detailing Services
+                Experience Our Definitive! Difference
               </div>
             </div>
             
             <p className="text-xl text-gray-300 mb-8">
-              Professional automotive detailing that brings out the best in your vehicle. 
-              From paint correction to ceramic coatings, we deliver exceptional results.
+              At Definitive! Automotive Detailing, we take the upmost integrity in redefining the standard of an automotive detailing experience, while providing your vehicle with the Definitive Difference!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
