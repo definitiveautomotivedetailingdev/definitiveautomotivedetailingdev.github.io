@@ -1,9 +1,8 @@
 
 import React, { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
-import ServiceCard from "@/components/ServiceCard";
 import { Link } from "react-router-dom";
-import { Car, Sparkles, Shield, Droplets, MoveRight, CalendarDays } from "lucide-react";
+import { Car, MoveRight } from "lucide-react";
 
 const Index = () => {
   // Scroll to top on page load
@@ -11,62 +10,25 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredServices = [
-    {
-      title: "Paint Correction",
-      description: "Professional paint correction to restore your vehicle's finish to showroom quality.",
-      icon: <Sparkles size={24} />,
-      imageSrc: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png",
-      link: "/additional-services#paint-correction"
-    },
-    {
-      title: "Ceramic Coating",
-      description: "Long-lasting protection with our premium ceramic coating applications.",
-      icon: <Shield size={24} />,
-      imageSrc: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png",
-      link: "/additional-services#ceramic-coating"
-    },
-    {
-      title: "Interior Detailing",
-      description: "Complete interior cleaning and protection for a fresh, clean cabin experience.",
-      icon: <Droplets size={24} />,
-      imageSrc: "/lovable-uploads/03e83f18-76a1-4349-a197-dbde03a93343.png",
-      link: "/additional-services#interior"
-    }
-  ];
-
   return (
     <div>
       <HeroSection />
       
-      {/* Services Section */}
+      {/* Why Definitive Automotive Detailing Section */}
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-2">Our Services</h2>
-              <p className="text-gray-400 max-w-2xl">
-                Professional automotive detailing services to keep your vehicle looking its absolute best
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Why Definitive Automotive Detailing is the GTA's Top Choice for Mobile Car Detailing Services
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6 text-gray-300 text-lg leading-relaxed">
+              <p>
+                Definitive Automotive Detailing is the GTA's best mobile car detailing business, offering unmatched convenience and quality. Their skilled team provides top-tier automotive detailing services at your doorstep, saving you time and effort. Moreover, they use premium products and advanced techniques to restore your vehicle's appearance, ensuring every detail is spotless. Whether you need an exterior polish or interior deep clean, their professional service meets all your car detailing needs.
+              </p>
+              <p>
+                What sets Definitive Automotive Detailing apart is their commitment to customer satisfaction and convenience. Their mobile detailing service brings high-end care directly to you, wherever you are. Additionally, their expertise ensures that your vehicle receives the best treatment, from a thorough wash to a protective finish. Thanks to their attention to detail and exceptional service, Definitive Automotive Detailing has earned a reputation as the GTA's go-to choice for professional car care.
               </p>
             </div>
-            <Link 
-              to="/packages-pricing"
-              className="mt-4 sm:mt-0 flex items-center text-green-500 hover:text-green-400 transition-colors"
-            >
-              View all packages
-              <MoveRight className="ml-1 h-4 w-4" />
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <ServiceCard
-                key={index}
-                {...service}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              />
-            ))}
           </div>
         </div>
       </section>

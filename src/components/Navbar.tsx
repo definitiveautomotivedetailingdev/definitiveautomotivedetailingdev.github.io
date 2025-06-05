@@ -44,15 +44,12 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <NavLink to="/" className="flex items-center">
-          <div className="h-12 w-12 relative mr-3">
+          <div className="h-12 w-12 relative">
             <img 
-              src="/lovable-uploads/8acfad30-aa90-4edd-b779-aafd43058584.png" 
+              src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
               alt="Definitive Automotive Detailing Logo" 
               className="h-full w-full object-contain" 
             />
-          </div>
-          <div className="text-white font-bold text-lg">
-            Definitive Automotive Detailing
           </div>
         </NavLink>
 

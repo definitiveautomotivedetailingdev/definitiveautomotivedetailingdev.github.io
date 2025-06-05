@@ -11,16 +11,13 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 relative">
+              <div className="h-16 w-16 relative">
                 <img 
-                  src="/lovable-uploads/8acfad30-aa90-4edd-b779-aafd43058584.png" 
+                  src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
                   alt="Definitive Automotive Detailing Logo" 
                   className="h-full w-full object-contain" 
                 />
               </div>
-              <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500">
-                Definitive Automotive Detailing
-              </h2>
             </div>
             <p className="text-gray-300 max-w-md">
               Professional automotive detailing services that bring out the best in your vehicle. Quality work, attention to detail, and customer satisfaction guaranteed.

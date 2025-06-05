@@ -65,11 +65,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-40">
         <div className="flex flex-col items-center">
           <div className="max-w-2xl text-center">
-            {/* Brand Logo Area - Replace with your actual logo */}
+            {/* Brand Logo */}
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-glow mb-4">
-                Definitive <span className="text-green-500">Automotive</span> Detailing
-              </h1>
+              <div className="flex justify-center mb-6">
+                <img 
+                  src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
+                  alt="Definitive Automotive Detailing Logo" 
+                  className="h-48 w-auto object-contain" 
+                />
+              </div>
             </div>
             
             <div className="flex items-center justify-center mb-6">
@@ -93,10 +97,10 @@ const HeroSection = () => {
                 <MoveRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/services"
+                to="/packages-pricing"
                 className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                Our Services
+                View Packages
               </Link>
             </div>
           </div>
