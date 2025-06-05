@@ -38,7 +38,7 @@ const HeroSection = () => {
           Example: <source src="/your-video-file.mp4" type="video/mp4" />
           For now, this will show a black background since no video is provided
         */}
-        <source src="/public/home-page-video.mp4" type="video/mp4" />
+        <source src="/home-page-video.mp4" type="video/mp4" />
       </video>
       
       {/* Dark Overlay */}
