@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/definitiveautomotivedetailingdev.github.io/'
+  base: '/'
 }));
