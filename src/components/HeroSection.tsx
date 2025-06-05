@@ -50,34 +50,34 @@ const HeroSection = () => {
         className="absolute inset-0 z-20 transition-transform duration-500 ease-out"
         style={{ willChange: 'transform' }}
       >
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-green-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-definitive-red/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-definitive-red/5 rounded-full blur-3xl"></div>
       </div>
       
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-20 hidden lg:block z-30">
-        <Car className="h-12 w-12 text-green-500/30" />
+        <Car className="h-12 w-12 text-definitive-red/30" />
       </div>
       <div className="absolute bottom-1/4 right-20 hidden lg:block z-30">
-        <Shield className="h-16 w-16 text-green-500/30" />
+        <Shield className="h-16 w-16 text-definitive-red/30" />
       </div>
       
       <div className="container mx-auto px-6 relative z-40">
         <div className="flex flex-col items-center">
-          <div className="max-w-2xl text-center">
-            {/* Brand Logo */}
+          <div className="max-w-4xl text-center">
+            {/* Brand Logo - Made much larger */}
             <div className="mb-8">
               <div className="flex justify-center mb-6">
                 <img 
                   src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
                   alt="Definitive Automotive Detailing Logo" 
-                  className="h-48 w-auto object-contain" 
+                  className="h-96 w-auto object-contain" 
                 />
               </div>
             </div>
             
             <div className="flex items-center justify-center mb-6">
-              <div className="bg-green-500/20 text-green-400 rounded-full px-4 py-1 text-sm font-medium inline-flex items-center">
+              <div className="bg-definitive-red/20 text-definitive-red rounded-full px-4 py-1 text-sm font-medium inline-flex items-center">
                 <Sparkles className="h-3.5 w-3.5 mr-1" />
                 Premium Automotive Detailing Services
               </div>
@@ -91,14 +91,14 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/booking"
-                className="bg-green-500 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
                 Book Appointment
                 <MoveRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/packages-pricing"
-                className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                className="bg-transparent border border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
                 View Packages
               </Link>

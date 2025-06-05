@@ -33,6 +33,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				definitive: {
+					red: {
+						DEFAULT: '#DC2626', // Deep red from logo
+						light: '#EF4444', // Lighter red
+						dark: '#B91C1C', // Darker red
+						muted: 'rgba(220, 38, 38, 0.1)' // Transparent red for backgrounds
+					}
+				},
 				psyco: {
 					green: {
 						DEFAULT: '#10B981', // Primary green
@@ -102,8 +110,8 @@ export default {
 					'100%': { transform: 'translateX(0)', opacity: '1' }
 				},
 				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 10px rgba(16, 185, 129, 0.4)' },
-					'50%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.7)' }
+					'0%, 100%': { boxShadow: '0 0 10px rgba(220, 38, 38, 0.4)' },
+					'50%': { boxShadow: '0 0 20px rgba(220, 38, 38, 0.7)' }
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
@@ -115,8 +123,8 @@ export default {
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
+				'accordion-down': 'accordion-down 0.2s ease-out forwards',
+				'accordion-up': 'accordion-up 0.2s ease-out forwards',
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'fade-out': 'fade-out 0.5s ease-out forwards',
 				'slide-in': 'slide-in 0.5s ease-out forwards',
