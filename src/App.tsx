@@ -5,8 +5,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Services from "./pages/Services";
-import Blog from "./pages/Blog";
+import PackagesPricing from "./pages/PackagesPricing";
+import AdditionalServices from "./pages/AdditionalServices";
+import AboutUs from "./pages/AboutUs";
 import BlogDetail from "./pages/BlogDetail";
 import References from "./pages/References";
 import Booking from "./pages/Booking";
@@ -26,10 +27,11 @@ const App = () => (
         <main className="min-h-screen">
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/packages-pricing" element={<PackagesPricing />} />
+            <Route path="/additional-services" element={<AdditionalServices />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/references" element={<References />} />
+            <Route path="/gallery" element={<References />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

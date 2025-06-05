@@ -28,10 +28,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'References', path: '/references' },
-    { name: 'Booking', path: '/booking' },
+    { name: 'Packages & Pricing', path: '/packages-pricing' },
+    { name: 'Additional Services', path: '/additional-services' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Book Appointment', path: '/booking' },
   ];
 
   return (
@@ -43,17 +44,20 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <NavLink to="/" className="flex items-center">
-          <div className="h-20 w-auto md:h-28 md:w-auto relative">
+          <div className="h-12 w-12 relative mr-3">
             <img 
-              src="/lovable-uploads/5964f950-36a7-430c-a887-4eea91ad4973.png" 
-              alt="PSK Services Logo" 
-              className="h-full w-auto object-contain" 
+              src="/lovable-uploads/8acfad30-aa90-4edd-b779-aafd43058584.png" 
+              alt="Definitive Automotive Detailing Logo" 
+              className="h-full w-full object-contain" 
             />
+          </div>
+          <div className="text-white font-bold text-lg">
+            Definitive Automotive Detailing
           </div>
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -72,7 +76,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-white hover:text-green-400 transition-colors"
+          className="lg:hidden text-white hover:text-green-400 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,7 +86,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'fixed inset-0 z-40 glassmorphism pt-24 px-8 transition-all duration-300 ease-in-out transform md:hidden',
+          'fixed inset-0 z-40 glassmorphism pt-24 px-8 transition-all duration-300 ease-in-out transform lg:hidden',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >

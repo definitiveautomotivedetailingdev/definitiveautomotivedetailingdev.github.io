@@ -17,21 +17,21 @@ const Index = () => {
       description: "Professional paint correction to restore your vehicle's finish to showroom quality.",
       icon: <Sparkles size={24} />,
       imageSrc: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png",
-      link: "/services#paint-correction"
+      link: "/additional-services#paint-correction"
     },
     {
       title: "Ceramic Coating",
       description: "Long-lasting protection with our premium ceramic coating applications.",
       icon: <Shield size={24} />,
       imageSrc: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png",
-      link: "/services#ceramic-coating"
+      link: "/additional-services#ceramic-coating"
     },
     {
       title: "Interior Detailing",
       description: "Complete interior cleaning and protection for a fresh, clean cabin experience.",
       icon: <Droplets size={24} />,
       imageSrc: "/lovable-uploads/03e83f18-76a1-4349-a197-dbde03a93343.png",
-      link: "/services#interior"
+      link: "/additional-services#interior"
     }
   ];
 
@@ -50,10 +50,10 @@ const Index = () => {
               </p>
             </div>
             <Link 
-              to="/services"
-              className="mt-4 sm:mt-0 flex items-center text-psyco-green-DEFAULT hover:text-psyco-green-light transition-colors"
+              to="/packages-pricing"
+              className="mt-4 sm:mt-0 flex items-center text-green-500 hover:text-green-400 transition-colors"
             >
-              View all services
+              View all packages
               <MoveRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
@@ -93,7 +93,7 @@ const Index = () => {
                 className="glassmorphism flex flex-col items-center justify-center py-8 px-4 text-center card-hover animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-psyco-green-DEFAULT mb-4">
+                <div className="text-green-500 mb-4">
                   {vehicle.icon}
                 </div>
                 <h3 className="text-lg font-medium text-white">{vehicle.name}</h3>
@@ -104,7 +104,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Link
               to="/booking"
-              className="inline-flex items-center bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 btn-glow"
+              className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 btn-glow"
             >
               Book Your Detail
               <MoveRight className="ml-2 h-5 w-5" />
@@ -116,7 +116,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 md:px-12 bg-psyco-black-light relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-psyco-green-DEFAULT/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-green-500/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -128,16 +128,16 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/booking"
-                className="bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
                 Book Now
                 <MoveRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/services"
-                className="bg-transparent border border-psyco-green-DEFAULT text-psyco-green-DEFAULT hover:bg-psyco-green-DEFAULT/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                to="/packages-pricing"
+                className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                View Services
+                View Packages
               </Link>
             </div>
           </div>

@@ -69,23 +69,31 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink 
-                  to="/services" 
+                  to="/packages-pricing" 
                   className="text-gray-300 hover:text-green-400 transition-colors"
                 >
-                  Services
+                  Packages & Pricing
                 </NavLink>
               </li>
               <li>
                 <NavLink 
-                  to="/blog" 
+                  to="/additional-services" 
                   className="text-gray-300 hover:text-green-400 transition-colors"
                 >
-                  Blog
+                  Additional Services
                 </NavLink>
               </li>
               <li>
                 <NavLink 
-                  to="/references" 
+                  to="/about" 
+                  className="text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/gallery" 
                   className="text-gray-300 hover:text-green-400 transition-colors"
                 >
                   Gallery

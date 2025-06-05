@@ -24,8 +24,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Boldonse', 'sans-serif'],
-				boldonse: ['Boldonse', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
+				inter: ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
