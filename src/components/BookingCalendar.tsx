@@ -1,5 +1,5 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,11 +27,19 @@ const vehicleTypes = [
 ];
 
 const additionalServices = [
-  'Paint Correction',
+  'Sectional Detailings',
   'Ceramic Coating',
+  'Graphene Coatings',
+  'OZone Generator',
+  'Scented Steam Tank',
+  'Headlight Restoration',
+  'Crack & Chip Repair',
+  'ATV\'s, Dirtbikes, Quad\'s',
+  'Watercrafts',
+  'Dozers',
+  'Paint Correction',
   'Paint Protection Film (PPF)',
   'Window Tinting',
-  'Headlight Restoration',
   'Engine Bay Cleaning',
   'Leather Conditioning',
   'Odor Removal',
@@ -42,6 +50,7 @@ const additionalServices = [
 ];
 
 const BookingCalendar = () => {
+  const location = useLocation();
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [timeSlot, setTimeSlot] = useState<string>('');
   const [vehicleType, setVehicleType] = useState<string>('');
@@ -53,6 +62,16 @@ const BookingCalendar = () => {
     vehicleDetails: '',
     additionalDetails: ''
   });
+
+  // Handle preselected service from navigation
+  useEffect(() => {
+    if (location.state?.preselectedService) {
+      const preselectedService = location.state.preselectedService;
+      if (additionalServices.includes(preselectedService)) {
+        setSelectedServices([preselectedService]);
+      }
+    }
+  }, [location.state]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
