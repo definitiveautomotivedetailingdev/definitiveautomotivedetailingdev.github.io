@@ -39,14 +39,20 @@ export default {
 						light: '#a52520', // Lighter maroon
 						dark: '#5c130f', // Darker maroon
 						muted: 'rgba(130, 27, 22, 0.1)' // Transparent maroon for backgrounds
+					},
+					blue: {
+						DEFAULT: '#234c63', // Blueish color from logo
+						light: '#3a6b8a', // Lighter blue
+						dark: '#1a3b4f', // Darker blue
+						muted: 'rgba(35, 76, 99, 0.1)' // Transparent blue for backgrounds
 					}
 				},
 				psyco: {
 					green: {
-						DEFAULT: '#10B981', // Primary green
-						light: '#34D399', // Lighter green
-						dark: '#059669', // Darker green
-						muted: 'rgba(16, 185, 129, 0.1)' // Transparent green for backgrounds
+						DEFAULT: '#234c63', // Changed from green to blueish
+						light: '#3a6b8a', // Changed from green to lighter blueish
+						dark: '#1a3b4f', // Changed from green to darker blueish
+						muted: 'rgba(35, 76, 99, 0.1)' // Changed from green to transparent blueish
 					},
 					black: {
 						DEFAULT: '#121212', // Deep black

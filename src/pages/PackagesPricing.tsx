@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Check, Star, Car, Sparkles, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -83,7 +82,7 @@ const PackagesPricing = () => {
       {/* Hero Section */}
       <section className="bg-psyco-black-light py-20 px-6 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-green-500/10 rounded-full blur-3xl top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-definitive-blue/10 rounded-full blur-3xl top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -107,13 +106,13 @@ const PackagesPricing = () => {
               <div 
                 key={index}
                 className={`glassmorphism p-8 card-hover animate-fade-in relative ${
-                  pkg.popular ? 'border-green-500/50 scale-105' : ''
+                  pkg.popular ? 'border-definitive-blue/50 scale-105' : ''
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
+                    <div className="bg-definitive-blue text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
                       <Star className="h-3 w-3 mr-1" />
                       Most Popular
                     </div>
@@ -121,7 +120,7 @@ const PackagesPricing = () => {
                 )}
                 
                 <div className="text-center mb-6">
-                  <div className="text-green-500 mb-4 flex justify-center">
+                  <div className="text-definitive-blue mb-4 flex justify-center">
                     {pkg.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
@@ -129,7 +128,7 @@ const PackagesPricing = () => {
                     {pkg.originalPrice && (
                       <div className="text-lg text-gray-400 line-through">{pkg.originalPrice}</div>
                     )}
-                    <div className="text-3xl font-bold text-green-500">{pkg.price}</div>
+                    <div className="text-3xl font-bold text-definitive-blue">{pkg.price}</div>
                   </div>
                   {pkg.discount && (
                     <div className="text-orange-400 font-medium text-sm mb-2">{pkg.discount}</div>
@@ -142,7 +141,7 @@ const PackagesPricing = () => {
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-definitive-blue mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -152,8 +151,8 @@ const PackagesPricing = () => {
                   to="/booking"
                   className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center ${
                     pkg.popular
-                      ? 'bg-green-500 hover:bg-green-600 text-white btn-glow'
-                      : 'bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10'
+                      ? 'bg-definitive-blue hover:bg-definitive-blue-dark text-white btn-glow'
+                      : 'bg-transparent border border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10'
                   }`}
                 >
                   Book This Package
@@ -183,7 +182,7 @@ const PackagesPricing = () => {
               >
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-medium text-white">{service.name}</h3>
-                  <span className="text-green-500 font-bold">{service.price}</span>
+                  <span className="text-definitive-blue font-bold">{service.price}</span>
                 </div>
               </div>
             ))}
@@ -194,7 +193,7 @@ const PackagesPricing = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-green-500/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-definitive-blue/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -208,13 +207,13 @@ const PackagesPricing = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/booking"
-                className="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-definitive-blue hover:bg-definitive-blue-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
                 Book Appointment
               </Link>
               <Link
                 to="/additional-services"
-                className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                className="bg-transparent border border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
                 View Additional Services
               </Link>

@@ -64,6 +64,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Packages & Pricing', path: '/packages-pricing' },
+    { name: 'Additional Services', path: '/additional-services' },
     { name: 'About Us', path: '/about' },
     { name: 'Book Appointment', path: '/booking' },
   ];
@@ -100,14 +101,14 @@ const Navbar = () => {
               <ChevronDown className="h-3 w-3" />
             </DropdownMenuTrigger>
             <DropdownMenuContent 
-              className="bg-psyco-black-light border-psyco-green-muted/50 max-h-80 overflow-y-auto w-64"
+              className="bg-psyco-black-light border-definitive-blue-muted/50 max-h-80 overflow-y-auto w-64"
               align="center"
             >
               {additionalServices.map((service) => (
                 <DropdownMenuItem
                   key={service}
                   onClick={() => handleServiceSelect(service)}
-                  className="text-gray-300 hover:text-white hover:bg-psyco-green-DEFAULT/20 cursor-pointer"
+                  className="text-gray-300 hover:text-white hover:bg-definitive-blue/20 cursor-pointer"
                 >
                   {service}
                 </DropdownMenuItem>

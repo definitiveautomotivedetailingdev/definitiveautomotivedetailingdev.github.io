@@ -39,7 +39,7 @@ const ServiceCard = ({
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute top-4 left-4 z-20 bg-psyco-black-card p-2 rounded-lg">
-          <div className="text-psyco-green-DEFAULT">
+          <div className="text-definitive-blue">
             {icon}
           </div>
         </div>
@@ -50,7 +50,7 @@ const ServiceCard = ({
         <p className="text-gray-300 mb-4 text-sm">{description}</p>
         <Link 
           to={link}
-          className="inline-flex items-center text-psyco-green-light hover:text-psyco-green-DEFAULT transition-colors duration-300 text-sm font-medium"
+          className="inline-flex items-center text-definitive-blue-light hover:text-definitive-blue transition-colors duration-300 text-sm font-medium"
         >
           Learn more
           <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
