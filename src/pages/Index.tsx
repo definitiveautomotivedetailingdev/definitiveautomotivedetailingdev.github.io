@@ -12,12 +12,83 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const vehicleTypes = [
+    {
+      name: "Sedans/Coupes",
+      image: "/lovable-uploads/ada582c7-709e-480e-8494-1461b602567c.png"
+    },
+    {
+      name: "Mid-Size Trucks",
+      image: "/lovable-uploads/5964f950-36a7-430c-a887-4eea91ad4973.png"
+    },
+    {
+      name: "2 Row SUV's",
+      image: "/lovable-uploads/62df2610-5e4e-4be9-9dc5-c154242e9c89.png"
+    },
+    {
+      name: "3 Row SUV's",
+      image: "/lovable-uploads/752a1366-6aea-49ad-be21-341fe7476d14.png"
+    },
+    {
+      name: "Minivan's",
+      image: "/lovable-uploads/8acfad30-aa90-4edd-b779-aafd43058584.png"
+    },
+    {
+      name: "Full-Size Trucks",
+      image: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png"
+    },
+    {
+      name: "Semi Truck's",
+      image: "/lovable-uploads/8dced82a-6a2c-48ee-a060-463c28764183.png"
+    },
+    {
+      name: "Fleet Detailing",
+      image: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png"
+    }
+  ];
+
   return (
     <div>
       <HeroSection />
       
       {/* Services Features Section */}
       <ServicesFeatures />
+      
+      {/* Vehicle Selection Section */}
+      <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Select Your Type of Vehicle to View Our Packages and Pricing
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {vehicleTypes.map((vehicle, index) => (
+              <Link
+                key={index}
+                to="/packages-pricing"
+                className="group relative overflow-hidden rounded-lg card-hover animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="aspect-[4/3] relative">
+                  <img 
+                    src={vehicle.image} 
+                    alt={vehicle.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-bold text-lg bg-black/60 px-3 py-2 rounded backdrop-blur-sm">
+                      {vehicle.name}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       
       {/* Reviews Carousel Section */}
       <ReviewsCarousel />
