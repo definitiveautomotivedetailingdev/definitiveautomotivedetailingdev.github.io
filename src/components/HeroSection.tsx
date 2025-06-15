@@ -76,7 +76,7 @@ const HeroSection = () => {
             </div>
             
             <p className="text-xl text-gray-300 mb-8">
-              At Definitive! Automotive Detailing, we take the upmost integrity in redefining the standard of an automotive detailing experience, while providing your vehicle with the Definitive Difference!
+              At Definitive Automotive Detailing, we take the upmost integrity in redefining the standard of an automotive detailing experience for our valued clients, while providing your vehicle with our Definitive! Difference.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
