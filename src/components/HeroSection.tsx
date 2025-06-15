@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { MoveRight, Sparkles, Car, Shield } from 'lucide-react';
+import { MoveRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -52,14 +52,6 @@ const HeroSection = () => {
       >
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-definitive-red/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-definitive-red/5 rounded-full blur-3xl"></div>
-      </div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-20 hidden lg:block z-30">
-        <Car className="h-12 w-12 text-definitive-red/30" />
-      </div>
-      <div className="absolute bottom-1/4 right-20 hidden lg:block z-30">
-        <Shield className="h-16 w-16 text-definitive-red/30" />
       </div>
       
       <div className="container mx-auto px-6 relative z-40">
