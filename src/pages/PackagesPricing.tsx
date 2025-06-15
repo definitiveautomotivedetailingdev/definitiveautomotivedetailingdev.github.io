@@ -10,55 +10,61 @@ const PackagesPricing = () => {
 
   const packages = [
     {
-      name: "Basic Wash & Wax",
-      price: "$89",
+      name: "Interior Detail",
+      price: "$120",
+      originalPrice: null,
       duration: "2-3 hours",
-      description: "Perfect for regular maintenance and keeping your vehicle looking fresh.",
+      description: "Complete interior cleaning and protection for a fresh, comfortable ride.",
       features: [
-        "Hand wash with premium soap",
-        "Tire and rim cleaning",
-        "Interior vacuum",
-        "Dashboard and console wipe down",
-        "Window cleaning (interior & exterior)",
-        "Premium carnauba wax application"
+        "Deep vacuum of all surfaces",
+        "Dashboard and console cleaning",
+        "Door panel and trim cleaning",
+        "Seat cleaning and conditioning",
+        "Window cleaning (interior)",
+        "Floor mat cleaning",
+        "Air freshening treatment",
+        "UV protection for plastic surfaces"
       ],
       popular: false,
       icon: <Car className="h-8 w-8" />
     },
     {
-      name: "Premium Detail",
-      price: "$189",
-      duration: "4-5 hours",
-      description: "Comprehensive detailing service for the discerning vehicle owner.",
+      name: "Exterior Detail",
+      price: "$140",
+      originalPrice: null,
+      duration: "3-4 hours",
+      description: "Professional exterior care to restore your vehicle's shine and protection.",
       features: [
-        "Everything in Basic package",
+        "Hand wash with premium soap",
         "Paint decontamination",
         "Clay bar treatment",
-        "Single-stage paint correction",
-        "Interior deep cleaning",
-        "Leather conditioning",
+        "Tire and rim deep cleaning",
+        "Window cleaning (exterior)",
         "Trim restoration",
-        "6-month paint protection"
+        "Premium wax application",
+        "Chrome and metal polishing"
       ],
-      popular: true,
+      popular: false,
       icon: <Sparkles className="h-8 w-8" />
     },
     {
-      name: "Signature Detail",
-      price: "$349",
-      duration: "6-8 hours",
-      description: "Our flagship service delivering showroom-quality results.",
+      name: "Interior + Exterior",
+      price: "$230",
+      originalPrice: "$260",
+      duration: "5-6 hours",
+      description: "Complete vehicle transformation with our most comprehensive package.",
+      discount: "$30 Exclusive Discount",
       features: [
-        "Everything in Premium package",
-        "Multi-stage paint correction",
-        "Ceramic coating application",
-        "Engine bay detailing",
-        "Complete interior protection",
+        "Everything from Interior Detail",
+        "Everything from Exterior Detail",
+        "Paint correction (single stage)",
+        "Ceramic coating protection",
+        "Engine bay cleaning",
         "Headlight restoration",
-        "Chrome polishing",
-        "1-year paint protection warranty"
+        "Complete interior protection",
+        "6-month warranty coverage"
       ],
-      popular: false,
+      popular: true,
       icon: <Shield className="h-8 w-8" />
     }
   ];
@@ -87,7 +93,7 @@ const PackagesPricing = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
               Professional automotive detailing packages designed to meet every need and budget. 
-              From basic maintenance to complete transformation.
+              Save $30 when you choose our comprehensive Interior + Exterior package!
             </p>
           </div>
         </div>
@@ -119,7 +125,15 @@ const PackagesPricing = () => {
                     {pkg.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                  <div className="text-3xl font-bold text-green-500 mb-2">{pkg.price}</div>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    {pkg.originalPrice && (
+                      <div className="text-lg text-gray-400 line-through">{pkg.originalPrice}</div>
+                    )}
+                    <div className="text-3xl font-bold text-green-500">{pkg.price}</div>
+                  </div>
+                  {pkg.discount && (
+                    <div className="text-orange-400 font-medium text-sm mb-2">{pkg.discount}</div>
+                  )}
                   <div className="text-gray-400 text-sm">{pkg.duration}</div>
                 </div>
                 
@@ -189,7 +203,7 @@ const PackagesPricing = () => {
               Ready to Transform Your Vehicle?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Book your appointment today and experience the difference professional detailing makes.
+              Book your appointment today and experience the difference professional detailing makes. Don't forget about our $30 discount on Interior + Exterior packages!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
