@@ -9,7 +9,6 @@ import PackagesPricing from "./pages/PackagesPricing";
 import AdditionalServices from "./pages/AdditionalServices";
 import AboutUs from "./pages/AboutUs";
 import BlogDetail from "./pages/BlogDetail";
-import References from "./pages/References";
 import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -31,7 +30,6 @@ const App = () => (
             <Route path="/additional-services" element={<AdditionalServices />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/gallery" element={<References />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
