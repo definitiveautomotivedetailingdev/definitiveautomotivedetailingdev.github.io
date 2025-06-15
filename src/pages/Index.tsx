@@ -15,35 +15,35 @@ const Index = () => {
   const vehicleTypes = [
     {
       name: "Sedans/Coupes",
-      image: "/lovable-uploads/ada582c7-709e-480e-8494-1461b602567c.png"
+      image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       name: "Mid-Size Trucks",
-      image: "/lovable-uploads/5964f950-36a7-430c-a887-4eea91ad4973.png"
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       name: "2 Row SUV's",
-      image: "/lovable-uploads/62df2610-5e4e-4be9-9dc5-c154242e9c89.png"
+      image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
     },
     {
       name: "3 Row SUV's",
-      image: "/lovable-uploads/752a1366-6aea-49ad-be21-341fe7476d14.png"
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       name: "Minivan's",
-      image: "/lovable-uploads/8acfad30-aa90-4edd-b779-aafd43058584.png"
+      image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
     },
     {
       name: "Full-Size Trucks",
-      image: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png"
+      image: "https://images.unsplash.com/photo-1594736797933-d0708ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       name: "Semi Truck's",
-      image: "/lovable-uploads/8dced82a-6a2c-48ee-a060-463c28764183.png"
+      image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2062&q=80"
     },
     {
       name: "Fleet Detailing",
-      image: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png"
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     }
   ];
 
