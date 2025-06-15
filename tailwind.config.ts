@@ -35,10 +35,10 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				definitive: {
 					red: {
-						DEFAULT: '#DC2626', // Deep red from logo
-						light: '#EF4444', // Lighter red
-						dark: '#B91C1C', // Darker red
-						muted: 'rgba(220, 38, 38, 0.1)' // Transparent red for backgrounds
+						DEFAULT: '#821b16', // New reddish maroon from logo
+						light: '#a52520', // Lighter maroon
+						dark: '#5c130f', // Darker maroon
+						muted: 'rgba(130, 27, 22, 0.1)' // Transparent maroon for backgrounds
 					}
 				},
 				psyco: {
@@ -110,8 +110,8 @@ export default {
 					'100%': { transform: 'translateX(0)', opacity: '1' }
 				},
 				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 10px rgba(220, 38, 38, 0.4)' },
-					'50%': { boxShadow: '0 0 20px rgba(220, 38, 38, 0.7)' }
+					'0%, 100%': { boxShadow: '0 0 10px rgba(130, 27, 22, 0.4)' },
+					'50%': { boxShadow: '0 0 20px rgba(130, 27, 22, 0.7)' }
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
