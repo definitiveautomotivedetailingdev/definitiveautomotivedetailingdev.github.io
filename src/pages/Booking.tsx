@@ -38,7 +38,7 @@ const Booking = () => {
       <section className="bg-psyco-black-light py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">Book Your Detailing Appointment</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-definitive-gold mb-6 animate-fade-in">Book Your Detailing Appointment</h1>
             <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
               Ready to give your vehicle the care it deserves? Use our simple booking system to schedule your professional detailing service.
             </p>
@@ -50,7 +50,7 @@ const Booking = () => {
       <section className="py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-2">How Booking Works</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-2">How Booking Works</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Our simple four-step process makes scheduling your detailing service easy
             </p>
@@ -63,14 +63,14 @@ const Booking = () => {
                 className="glassmorphism p-6 text-center animate-fade-in relative"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-psyco-green-DEFAULT mb-4 flex justify-center">
+                <div className="text-definitive-gold mb-4 flex justify-center">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-medium text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
                 
                 {index < bookingSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-psyco-green-DEFAULT/50">
+                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-definitive-gold/50">
                     <MoveRight size={24} />
                   </div>
                 )}
@@ -84,7 +84,7 @@ const Booking = () => {
       <section className="py-16 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-2">Select Your Appointment</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-2">Select Your Appointment</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Choose from our available slots and let us know about your vehicle and service preferences
             </p>
@@ -98,7 +98,7 @@ const Booking = () => {
       <section className="py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-2">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-2">Frequently Asked Questions</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Common questions about our detailing services and booking process
             </p>
@@ -150,33 +150,33 @@ const Booking = () => {
           <div className="glassmorphism p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Prefer to Call or Email?</h2>
+                <h2 className="text-3xl font-bold text-definitive-gold mb-4">Prefer to Call or Email?</h2>
                 <p className="text-gray-300 mb-6">
                   If you have specific questions about our services or prefer to discuss your vehicle's needs directly, we're here to help.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">(555) 123-4567</span>
+                    <Phone className="h-5 w-5 text-definitive-gold" />
+                    <span className="text-white">(416) 275-1179</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">info@definitiveautomotivedetailing.ca</span>
+                    <Mail className="h-5 w-5 text-definitive-gold" />
+                    <span className="text-white">definitiveautomotivedetailing@outlook.com</span>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <Clock className="h-5 w-5 text-psyco-green-DEFAULT" />
-                    <span className="text-white">Mon-Fri: 8am-6pm | Sat: 9am-5pm | Sun: 10am-4pm</span>
+                    <Clock className="h-5 w-5 text-definitive-gold" />
+                    <span className="text-white">8am to 10pm, 7 days a week</span>
                   </div>
                 </div>
               </div>
               
               <div className="flex flex-col justify-center space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-definitive-gold/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-definitive-gold" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Free Consultations</h3>
@@ -185,8 +185,8 @@ const Booking = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-definitive-gold/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-definitive-gold" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Custom Packages</h3>
@@ -195,8 +195,8 @@ const Booking = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-psyco-green-DEFAULT/20 p-3 rounded-lg">
-                    <CheckCircle className="h-6 w-6 text-psyco-green-DEFAULT" />
+                  <div className="bg-definitive-gold/20 p-3 rounded-lg">
+                    <CheckCircle className="h-6 w-6 text-definitive-gold" />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Mobile Service</h3>

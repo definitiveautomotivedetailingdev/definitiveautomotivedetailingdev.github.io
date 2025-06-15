@@ -49,7 +49,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold text-definitive-gold mb-6 animate-fade-in">
                 About Definitive Automotive Detailing
               </h1>
               <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
@@ -110,7 +110,7 @@ const AboutUs = () => {
             </div>
             
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold text-definitive-gold mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-300">
                 <p>
                   What started as a passion for automotive perfection has grown into one of the region's 
@@ -136,7 +136,7 @@ const AboutUs = () => {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-4">Our Values</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               The principles that guide everything we do and ensure exceptional service for every customer
             </p>
@@ -164,7 +164,7 @@ const AboutUs = () => {
       <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-4">Meet Our Team</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Experienced professionals dedicated to delivering exceptional results for every vehicle
             </p>
@@ -212,7 +212,7 @@ const AboutUs = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="glassmorphism p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">
               Ready to Experience the Definitive Difference?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
