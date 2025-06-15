@@ -46,7 +46,7 @@ const ServicesFeatures = () => {
               <div className="text-definitive-red mb-4 flex justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold text-orange-400 mb-3">{feature.title}</h3>
+              <h3 className="text-lg font-bold text-definitive-gold mb-3">{feature.title}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
@@ -61,7 +61,7 @@ const ServicesFeatures = () => {
             <div className="text-definitive-red mb-4 flex justify-center">
               {customerSatisfaction.icon}
             </div>
-            <h3 className="text-lg font-bold text-orange-400 mb-3">{customerSatisfaction.title}</h3>
+            <h3 className="text-lg font-bold text-definitive-gold mb-3">{customerSatisfaction.title}</h3>
             <div className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
               <p className="font-bold mb-2">If you aren't happy, we aren't finished!</p>
               <p>{customerSatisfaction.description}</p>

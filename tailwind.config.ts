@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -45,6 +44,12 @@ export default {
 						light: '#3a6b8a', // Lighter blue
 						dark: '#1a3b4f', // Darker blue
 						muted: 'rgba(35, 76, 99, 0.1)' // Transparent blue for backgrounds
+					},
+					gold: {
+						DEFAULT: '#e6c547', // Refined gold color - brighter and more readable than #d1b000
+						light: '#f0d460', // Lighter gold
+						dark: '#c2a634', // Darker gold
+						muted: 'rgba(230, 197, 71, 0.1)' // Transparent gold for backgrounds
 					}
 				},
 				psyco: {
