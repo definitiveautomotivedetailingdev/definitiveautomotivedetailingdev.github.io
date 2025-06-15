@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -77,7 +78,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8 mx-auto">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 2).map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
@@ -113,6 +114,21 @@ const Navbar = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {navLinks.slice(2).map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                cn(
+                  'text-white hover:text-definitive-red transition-colors duration-300 link-hover text-sm font-medium tracking-wide',
+                  isActive && 'text-definitive-red after:w-full'
+                )
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
 
         {/* Mobile Navigation Toggle */}
