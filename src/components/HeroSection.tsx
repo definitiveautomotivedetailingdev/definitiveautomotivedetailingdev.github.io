@@ -82,13 +82,13 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/packages-pricing"
-                className="bg-transparent border border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                className="bg-transparent border-2 border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg shadow-definitive-red/20 hover:shadow-xl hover:shadow-definitive-red/30 hover:border-definitive-red-light"
               >
                 View Packages
               </Link>
               <Link
                 to="/booking"
-                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow shadow-lg shadow-definitive-red/30 hover:shadow-xl hover:shadow-definitive-red/40 border border-definitive-red-light/30 hover:border-definitive-red-light/50"
               >
                 Book Appointment
                 <MoveRight className="ml-2 h-5 w-5" />

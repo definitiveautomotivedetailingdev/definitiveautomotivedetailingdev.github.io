@@ -71,6 +71,7 @@
   
   .btn-glow {
     @apply relative overflow-hidden;
+    box-shadow: 0 0 20px rgba(130, 27, 22, 0.3), 0 0 40px rgba(130, 27, 22, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .btn-glow::after {
@@ -79,6 +80,11 @@
   
   .btn-glow:hover::after {
     @apply left-[100%];
+  }
+  
+  .btn-glow:hover {
+    box-shadow: 0 0 30px rgba(130, 27, 22, 0.4), 0 0 60px rgba(130, 27, 22, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
   }
   
   .text-glow {

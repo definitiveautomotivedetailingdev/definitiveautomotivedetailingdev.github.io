@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Check, Star, Car, Sparkles, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -149,10 +150,10 @@ const PackagesPricing = () => {
                 
                 <Link
                   to="/booking"
-                  className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center ${
+                  className={`w-full py-4 px-6 rounded-lg font-bold transition-all duration-300 flex items-center justify-center ${
                     pkg.popular
-                      ? 'bg-definitive-blue hover:bg-definitive-blue-dark text-white btn-glow'
-                      : 'bg-transparent border border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10'
+                      ? 'bg-definitive-blue hover:bg-definitive-blue-dark text-white btn-glow shadow-lg shadow-definitive-blue/30 hover:shadow-xl hover:shadow-definitive-blue/40 border border-definitive-blue-light/30 hover:border-definitive-blue-light/50'
+                      : 'bg-transparent border-2 border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10 shadow-lg shadow-definitive-blue/20 hover:shadow-xl hover:shadow-definitive-blue/30 hover:border-definitive-blue-light'
                   }`}
                 >
                   Book This Package
@@ -207,13 +208,13 @@ const PackagesPricing = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/booking"
-                className="bg-definitive-blue hover:bg-definitive-blue-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-definitive-blue hover:bg-definitive-blue-dark text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow shadow-lg shadow-definitive-blue/30 hover:shadow-xl hover:shadow-definitive-blue/40 border border-definitive-blue-light/30 hover:border-definitive-blue-light/50"
               >
                 Book Appointment
               </Link>
               <Link
                 to="/additional-services"
-                className="bg-transparent border border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                className="bg-transparent border-2 border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10 font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg shadow-definitive-blue/20 hover:shadow-xl hover:shadow-definitive-blue/30 hover:border-definitive-blue-light"
               >
                 View Additional Services
               </Link>

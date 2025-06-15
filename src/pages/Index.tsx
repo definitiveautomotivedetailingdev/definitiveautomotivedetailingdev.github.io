@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import ServicesFeatures from "@/components/ServicesFeatures";
@@ -39,7 +38,7 @@ const Index = () => {
     },
     {
       name: "Semi Truck's",
-      image: "https://images.unsplash.com/photo-1559331922-516bac7dbf86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHx0cnVja3xlbnwwfHwwfHx8MA%3D%3D"
+      image: "https://images.unsplash.com/photo-1559331922-516bac7dbf86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Fleet Detailing",
@@ -124,19 +123,13 @@ const Index = () => {
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Experience the difference professional automotive detailing makes. Book your appointment today and give your vehicle the care it deserves.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link
                 to="/booking"
-                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
+                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow shadow-lg shadow-definitive-red/30 hover:shadow-xl hover:shadow-definitive-red/40 border border-definitive-red-light/30 hover:border-definitive-red-light/50"
               >
                 Book Now
                 <MoveRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/packages-pricing"
-                className="bg-transparent border border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                View Packages
               </Link>
             </div>
           </div>
