@@ -43,7 +43,7 @@ const ReviewsCarousel = () => {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
+    <section className="py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">

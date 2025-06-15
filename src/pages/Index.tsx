@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import ServicesFeatures from "@/components/ServicesFeatures";
@@ -89,11 +90,11 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Reviews Carousel Section */}
+      {/* Reviews Carousel Section - Changed to no background color */}
       <ReviewsCarousel />
       
-      {/* Why Definitive Automotive Detailing Section */}
-      <section className="py-20 px-6 md:px-12">
+      {/* Why Definitive Automotive Detailing Section - Changed to bg-psyco-black-light */}
+      <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-8">
