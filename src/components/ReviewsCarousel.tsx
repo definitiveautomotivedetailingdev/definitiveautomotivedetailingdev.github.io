@@ -47,7 +47,7 @@ const ReviewsCarousel = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-4">
-            Our Reviews Speak for Themselves!
+            Quality you can see. Trust you can feel.
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             See what our satisfied customers have to say about our automotive detailing services
