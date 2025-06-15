@@ -7,27 +7,27 @@ const ServicesFeatures = () => {
     {
       icon: <Target className="h-8 w-8" />,
       title: "UNMATCHED PRECISION",
-      description: "We take pride in our meticulous attention to detail, ensuring every inch of your vehicle is expertly cleaned, polished, and restored to its finest condition."
+      description: "We take pride in our meticulous attention to detail, ensuring every inch of your vehicle is cleaned, polished, & restored back to the day you bought it."
     },
     {
       icon: <Award className="h-8 w-8" />,
       title: "PREMIUM QUALITY PRODUCTS",
-      description: "Only the finest, eco-friendly products are used to enhance and protect your vehicle's finish, ensuring long-lasting results."
+      description: "Only the best, eco-friendly products are used to enhance & protect your vehicle's finish, ensuring a long-lasting Definitive! Difference."
     },
     {
       icon: <Wrench className="h-8 w-8" />,
       title: "COMPREHENSIVE SERVICES",
-      description: "From exterior washes to interior deep cleans and paint correction, we offer a full range of services to meet all your vehicle detailing needs."
+      description: "From sectional detailings to ceramic coatings & paint protection, we offer a full range of services to meet all of your detailing needs!"
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: "EXPERIENCED TECHNICIANS",
-      description: "Our skilled team of professionals brings years of expertise to each job, guaranteeing a flawless and thorough detailing experience."
+      description: "Our skilled team of professionals brings years of expertise to each detailing session we provide, guaranteeing a Definitive! Difference & pleasant detailing experience for both you, & your vehicle."
     },
     {
       icon: <Heart className="h-8 w-8" />,
       title: "CUSTOMER SATISFACTION",
-      description: "We are committed to exceeding our customers' expectations by providing personalized service and ensuring every vehicle leaves looking its absolute best."
+      description: "If you aren't happy, we aren't finished! Our team is committed to exceeding the expectations of our valued clients by providing personalized, tailored services, ensuring every vehicle is treated as if it were our Mother's vehicle. Whether you are our 1st client of the day or last client of the day, we assure every vehicle receives our undivided attention, leaving you blown away with our Definitive! Difference."
     }
   ];
 
