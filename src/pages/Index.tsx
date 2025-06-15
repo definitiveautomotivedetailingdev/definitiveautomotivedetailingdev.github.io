@@ -1,9 +1,10 @@
+
 import React, { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import ServicesFeatures from "@/components/ServicesFeatures";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import { Link } from "react-router-dom";
-import { Car, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 const Index = () => {
   // Scroll to top on page load
@@ -107,48 +108,6 @@ const Index = () => {
                 What sets Definitive Automotive Detailing apart is their commitment to customer satisfaction and convenience. Their mobile detailing service brings high-end care directly to you, wherever you are. Additionally, their expertise ensures that your vehicle receives the best treatment, from a thorough wash to a protective finish. Thanks to their attention to detail and exceptional service, Definitive Automotive Detailing has earned a reputation as the GTA's go-to choice for professional car care.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Vehicle Types Section */}
-      <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-orange-400 mb-2">We Detail All Vehicle Types</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              From luxury cars to commercial vehicles, we provide expert detailing for every type of vehicle
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { name: "Sedans", icon: <Car size={32} /> },
-              { name: "SUVs", icon: <Car size={32} /> },
-              { name: "Trucks", icon: <Car size={32} /> },
-              { name: "Luxury Cars", icon: <Car size={32} /> }
-            ].map((vehicle, index) => (
-              <div 
-                key={index}
-                className="glassmorphism flex flex-col items-center justify-center py-8 px-4 text-center card-hover animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-definitive-red mb-4">
-                  {vehicle.icon}
-                </div>
-                <h3 className="text-lg font-medium text-white">{vehicle.name}</h3>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link
-              to="/booking"
-              className="inline-flex items-center bg-definitive-red hover:bg-definitive-red-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 btn-glow"
-            >
-              Book Your Detail
-              <MoveRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </div>
       </section>

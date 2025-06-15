@@ -64,7 +64,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Packages & Pricing', path: '/packages-pricing' },
-    { name: 'Additional Services', path: '/additional-services' },
     { name: 'About Us', path: '/about' },
     { name: 'Book Appointment', path: '/booking' },
   ];
