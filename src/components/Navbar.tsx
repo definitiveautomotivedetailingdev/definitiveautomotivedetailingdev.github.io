@@ -43,18 +43,8 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <NavLink to="/" className="flex items-center">
-          <div className="h-12 w-12 relative">
-            <img 
-              src="/lovable-uploads/b38643c2-7a0d-4cbb-b50e-41b841a27c05.png" 
-              alt="Definitive Automotive Detailing Logo" 
-              className="h-full w-full object-contain" 
-            />
-          </div>
-        </NavLink>
-
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8 mx-auto">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -73,7 +63,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="lg:hidden text-white hover:text-definitive-red transition-colors"
+          className="lg:hidden text-white hover:text-definitive-red transition-colors ml-auto"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
