@@ -58,7 +58,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">
-              Select Your Type of Vehicle to View Our Packages and Pricing
+              Select Your Vehicle Type to View Our Packages & Pricing
             </h2>
           </div>
           
