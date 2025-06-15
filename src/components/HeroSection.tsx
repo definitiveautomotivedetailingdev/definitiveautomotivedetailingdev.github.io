@@ -24,7 +24,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-20">
       {/* Video Background - Replace this src with your actual video file */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -81,17 +81,17 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
+                to="/packages-pricing"
+                className="bg-transparent border border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+              >
+                View Packages
+              </Link>
+              <Link
                 to="/booking"
                 className="bg-definitive-red hover:bg-definitive-red-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
                 Book Appointment
                 <MoveRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/packages-pricing"
-                className="bg-transparent border border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                View Packages
               </Link>
             </div>
           </div>
