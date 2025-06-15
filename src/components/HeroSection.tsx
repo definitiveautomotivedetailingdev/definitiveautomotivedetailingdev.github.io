@@ -69,7 +69,7 @@ const HeroSection = () => {
             </div>
             
             <div className="flex items-center justify-center mb-6">
-              <div className="bg-definitive-blue/20 text-definitive-blue rounded-full px-6 py-2 text-lg font-medium inline-flex items-center">
+              <div className="bg-definitive-red/20 text-white rounded-full px-6 py-2 text-lg font-medium inline-flex items-center">
                 <Sparkles className="h-4 w-4 mr-2" />
                 Experience Our Definitive! Difference
               </div>
