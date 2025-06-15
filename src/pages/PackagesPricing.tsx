@@ -88,7 +88,7 @@ const PackagesPricing = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold text-definitive-gold mb-6 animate-fade-in">
               Packages & Pricing
             </h1>
             <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
@@ -168,7 +168,7 @@ const PackagesPricing = () => {
       <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Add-On Services</h2>
+            <h2 className="text-3xl font-bold text-definitive-gold mb-4">Add-On Services</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Enhance any package with our additional services for a completely customized experience
             </p>
@@ -199,7 +199,7 @@ const PackagesPricing = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="glassmorphism p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">
               Ready to Transform Your Vehicle?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import BlogPost from "@/components/BlogPost";
 import { Search } from "lucide-react";
@@ -102,7 +101,7 @@ const Blog = () => {
       <section className="bg-psyco-black-light py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">Blog & Insights</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-definitive-gold mb-6 animate-fade-in">Blog & Insights</h1>
             <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-100">
               Industry knowledge, technical tips, and event inspiration from our expert team
             </p>
@@ -166,7 +165,7 @@ const Blog = () => {
       <section className="py-16 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="glassmorphism p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Stay Updated with Industry Insights</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-definitive-gold mb-4">Stay Updated with Industry Insights</h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Subscribe to our newsletter to receive the latest articles, tips, and industry news directly in your inbox.
             </p>
