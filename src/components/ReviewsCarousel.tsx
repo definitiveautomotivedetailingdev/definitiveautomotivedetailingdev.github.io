@@ -46,7 +46,7 @@ const ReviewsCarousel = () => {
     <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">
             Quality you can see. Trust you can feel.
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
