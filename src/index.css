@@ -113,6 +113,58 @@
   .link-hover:hover::after {
     width: 100%;
   }
+
+  /* Mobile-first responsive design improvements */
+  @media (max-width: 640px) {
+    .glassmorphism {
+      @apply p-4 mx-2;
+    }
+    
+    .card-hover {
+      @apply hover:translate-y-0;
+    }
+    
+    /* Improve button touch targets on mobile */
+    button, .btn, a[class*="btn"] {
+      @apply min-h-[44px] min-w-[44px];
+    }
+    
+    /* Better text scaling on mobile */
+    h1 {
+      @apply text-2xl;
+    }
+    
+    h2 {
+      @apply text-xl;
+    }
+    
+    /* Improved spacing for mobile */
+    .py-20 {
+      @apply py-12;
+    }
+    
+    .px-6 {
+      @apply px-4;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    /* Tablet-specific adjustments */
+    .glassmorphism {
+      @apply p-6;
+    }
+  }
+
+  /* Touch improvements */
+  @media (hover: none) and (pointer: coarse) {
+    .card-hover:hover {
+      @apply translate-y-0 shadow-none;
+    }
+    
+    .btn-glow:hover {
+      transform: none;
+    }
+  }
 }
 
 .calendar-container .react-calendar {
@@ -150,4 +202,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-definitive-red-light;
+}
+
+/* Improve mobile viewport handling */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
 }

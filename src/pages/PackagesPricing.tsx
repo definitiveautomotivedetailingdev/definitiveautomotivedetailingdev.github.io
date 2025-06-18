@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { Check, Star, Car, Sparkles, Shield } from "lucide-react";
+import { Check, Star, Car, Sparkles, Shield, MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PackagesPricing = () => {
@@ -70,9 +70,14 @@ const PackagesPricing = () => {
   ];
 
   const addOnServices = [
-    { name: "Ceramic Coating Upgrade", price: "+$150" },
-    { name: "Engine Bay Detail", price: "+$75" },
-    { name: "Headlight Restoration", price: "+$50" },
+    { name: "Paint Correction", price: "Starting at $200" },
+    { name: "Ceramic Coating", price: "Starting at $500" },
+    { name: "Paint Protection Film", price: "Starting at $800" },
+    { name: "Headlight Restoration", price: "Starting at $75" },
+    { name: "Engine Bay Detailing", price: "Starting at $100" },
+    { name: "Trim Restoration", price: "Starting at $60" },
+    { name: "Interior Protection", price: "Starting at $120" },
+    { name: "Wheel & Tire Detailing", price: "Starting at $80" },
     { name: "Pet Hair Removal", price: "+$40" },
     { name: "Odor Elimination Treatment", price: "+$60" },
     { name: "Scratch Removal (minor)", price: "+$80" }
@@ -191,32 +196,25 @@ const PackagesPricing = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Updated to match home page */}
       <section className="py-20 px-6 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-definitive-blue/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-definitive-red/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="glassmorphism p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">
-              Ready to Transform Your Vehicle?
-            </h2>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-definitive-gold mb-4">Ready to Transform Your Vehicle?</h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Book your appointment today and experience the difference professional detailing makes. Don't forget about our $30 discount on Interior + Exterior packages!
+              Experience the difference professional automotive detailing makes. Book your appointment today and give your vehicle the care it deserves.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link
                 to="/booking"
-                className="bg-definitive-blue hover:bg-definitive-blue-dark text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow shadow-lg shadow-definitive-blue/30 hover:shadow-xl hover:shadow-definitive-blue/40 border border-definitive-blue-light/30 hover:border-definitive-blue-light/50"
+                className="bg-definitive-red hover:bg-definitive-red-dark text-white font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow shadow-lg shadow-definitive-red/30 hover:shadow-xl hover:shadow-definitive-red/40 border border-definitive-red-light/30 hover:border-definitive-red-light/50"
               >
-                Book Appointment
-              </Link>
-              <Link
-                to="/additional-services"
-                className="bg-transparent border-2 border-definitive-blue text-definitive-blue hover:bg-definitive-blue/10 font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg shadow-definitive-blue/20 hover:shadow-xl hover:shadow-definitive-blue/30 hover:border-definitive-blue-light"
-              >
-                View Additional Services
+                Book Now
+                <MoveRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>

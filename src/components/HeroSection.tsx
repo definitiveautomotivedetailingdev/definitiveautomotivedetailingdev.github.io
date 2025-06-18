@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { MoveRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -81,7 +82,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/packages-pricing"
-                className="bg-transparent border-2 border-definitive-red text-definitive-red hover:bg-definitive-red/10 font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg shadow-definitive-red/20 hover:shadow-xl hover:shadow-definitive-red/30 hover:border-definitive-red-light"
+                className="bg-black/40 backdrop-blur-sm border-2 border-definitive-red text-definitive-red hover:bg-definitive-red/20 hover:border-definitive-red-light font-bold py-4 px-10 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg shadow-definitive-red/20 hover:shadow-xl hover:shadow-definitive-red/30"
               >
                 View Packages
               </Link>
