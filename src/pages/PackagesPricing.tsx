@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Check, Star, Car, Sparkles, Shield, MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -70,17 +69,26 @@ const PackagesPricing = () => {
   ];
 
   const addOnServices = [
-    { name: "Paint Correction", price: "Starting at $200" },
+    { name: "Sectional Detailings", price: "Starting at $50" },
     { name: "Ceramic Coating", price: "Starting at $500" },
-    { name: "Paint Protection Film", price: "Starting at $800" },
+    { name: "Graphene Coatings", price: "Starting at $600" },
+    { name: "OZone Generator", price: "Starting at $75" },
+    { name: "Scented Steam Tank", price: "Starting at $60" },
     { name: "Headlight Restoration", price: "Starting at $75" },
-    { name: "Engine Bay Detailing", price: "Starting at $100" },
-    { name: "Trim Restoration", price: "Starting at $60" },
-    { name: "Interior Protection", price: "Starting at $120" },
-    { name: "Wheel & Tire Detailing", price: "Starting at $80" },
+    { name: "Crack & Chip Repair", price: "Starting at $80" },
+    { name: "ATV's, Dirtbikes, Quad's", price: "Starting at $150" },
+    { name: "Watercrafts", price: "Starting at $200" },
+    { name: "Dozers", price: "Starting at $300" },
+    { name: "Paint Correction", price: "Starting at $200" },
+    { name: "Paint Protection Film (PPF)", price: "Starting at $800" },
+    { name: "Window Tinting", price: "Starting at $250" },
+    { name: "Engine Bay Cleaning", price: "Starting at $100" },
+    { name: "Leather Conditioning", price: "Starting at $80" },
+    { name: "Odor Removal", price: "Starting at $60" },
     { name: "Pet Hair Removal", price: "+$40" },
-    { name: "Odor Elimination Treatment", price: "+$60" },
-    { name: "Scratch Removal (minor)", price: "+$80" }
+    { name: "Scratch Removal", price: "+$80" },
+    { name: "Wheel & Tire Detailing", price: "Starting at $80" },
+    { name: "Chrome Polishing", price: "Starting at $60" }
   ];
 
   return (
