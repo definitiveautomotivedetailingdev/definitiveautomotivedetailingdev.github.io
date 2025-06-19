@@ -1,0 +1,298 @@
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  CalendarClock,
+  MessageSquare,
+  Loader2,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
+import {
+  format,
+  addDays,
+  setHours,
+  setMinutes,
+  startOfMonth,
+  endOfMonth,
+  eachDayOfInterval,
+  isSameMonth,
+  isSameDay,
+  isToday,
+  addMonths,
+  subMonths,
+  getDay,
+} from 'date-fns';
+
+const BUSINESS_HOURS = {
+  start: 8,
+  end: 22,
+  slotDuration: 60,
+  daysAhead: 180,
+  closedDays: [],
+};
+
+const vehicleTypes = [
+  'Sedan', 'SUV', 'Truck', 'Coupe', 'Convertible',
+  'Hatchback', 'Wagon', 'Van', 'Motorcycle', 'RV/Motorhome'
+];
+
+const additionalServices = [
+  'Sectional Detailings',
+  'Ceramic Coating',
+  'Graphene Coatings',
+  'OZone Generator',
+  'Scented Steam Tank',
+  'Headlight Restoration',
+  'Crack & Chip Repair',
+  'ATVs, Dirtbikes, Quads',
+  'Watercrafts',
+  'Dozers',
+  'Paint Correction',
+  'Paint Protection Film (PPF)',
+  'Window Tinting',
+  'Engine Bay Cleaning',
+  'Leather Conditioning',
+  'Odor Removal',
+  'Pet Hair Removal',
+  'Scratch Removal',
+  'Wheel & Tire Detailing',
+  'Chrome Polishing',
+];
+
+interface TimeSlot {
+  time: string;
+  datetime: Date;
+  available: boolean;
+}
+
+const BookingCalendar = () => {
+  const [date, setDate] = useState<Date | undefined>(undefined);
+  const [timeSlot, setTimeSlot] = useState<string>('');
+  const [vehicleType, setVehicleType] = useState<string>('');
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [availableSlots, setAvailableSlots] = useState<TimeSlot[]>([]);
+  const [isLoadingSlots, setIsLoadingSlots] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    vehicleDetails: '',
+    additionalDetails: ''
+  });
+
+  const toast = ({ title, description, variant }: { title: string; description: string; variant?: string }) => {
+    alert(`${title}\n${description}`);
+  };
+
+  useEffect(() => {
+    if (date) {
+      loadAvailableSlots(date);
+    }
+  }, [date]);
+
+  const loadAvailableSlots = async (selectedDate: Date) => {
+    setIsLoadingSlots(true);
+    setTimeSlot('');
+
+    try {
+      const response = await fetch(`/api/calendar/availability?date=${format(selectedDate, 'yyyy-MM-dd')}`);
+      const data = await response.json();
+      setAvailableSlots(data);
+    } catch (error) {
+      console.error('Error fetching availability:', error);
+      toast({
+        title: "Availability Error",
+        description: "Could not load available slots. Please try again or call us.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoadingSlots(false);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleServiceToggle = (service: string) => {
+    setSelectedServices(prev =>
+      prev.includes(service)
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!date || !timeSlot || !vehicleType) {
+      toast({
+        title: "Missing information",
+        description: "Please select a date, time slot, and vehicle type",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (!formData.name || !formData.email || !formData.phone) {
+      toast({
+        title: "Missing contact information",
+        description: "Please fill in all required contact fields",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const bookingData = {
+      date: format(date, 'yyyy-MM-dd'),
+      timeSlot,
+      vehicleType,
+      selectedServices,
+      ...formData,
+    };
+
+    try {
+      const response = await fetch('/api/calendar/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(bookingData),
+      });
+
+      if (!response.ok) throw new Error('Booking failed');
+
+      toast({
+        title: "Booking submitted!",
+        description: `We'll contact you to confirm.`,
+      });
+
+      setDate(undefined);
+      setTimeSlot('');
+      setVehicleType('');
+      setSelectedServices([]);
+      setAvailableSlots([]);
+      setFormData({ name: '', email: '', phone: '', vehicleDetails: '', additionalDetails: '' });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Submission error",
+        description: "Unable to book. Please call us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="max-w-5xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center text-white mb-8">Book Your Appointment</h2>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-white mb-2">Select a date</label>
+          <input
+            type="date"
+            value={date ? format(date, 'yyyy-MM-dd') : ''}
+            onChange={(e) => setDate(new Date(e.target.value))}
+            className="w-full p-2 rounded bg-gray-800 text-white"
+          />
+
+          <div className="mt-4">
+            <label className="block text-white mb-2">Available time slots</label>
+            {isLoadingSlots ? (
+              <p className="text-gray-400">Loading...</p>
+            ) : (
+              <Select value={timeSlot} onValueChange={setTimeSlot} disabled={!date}>
+                <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
+                  <SelectValue placeholder="Select a time" />
+                </SelectTrigger>
+                <SelectContent className="bg-gray-800 border-gray-600">
+                  {availableSlots.map(slot => (
+                    <SelectItem
+                      key={slot.time}
+                      value={slot.time}
+                      disabled={!slot.available}
+                      className={`text-white ${!slot.available ? 'opacity-50' : ''}`}
+                    >
+                      {slot.time} {!slot.available && '(Unavailable)'}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            )}
+          </div>
+
+          <div className="mt-4">
+            <label className="block text-white mb-2">Vehicle Type</label>
+            <Select value={vehicleType} onValueChange={setVehicleType}>
+              <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
+                <SelectValue placeholder="Select vehicle type" />
+              </SelectTrigger>
+              <SelectContent className="bg-gray-800 border-gray-600">
+                {vehicleTypes.map(type => (
+                  <SelectItem key={type} value={type} className="text-white">
+                    {type}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <Input name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required className="bg-gray-800 text-white" />
+          <Input name="email" type="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required className="bg-gray-800 text-white" />
+          <Input name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleInputChange} required className="bg-gray-800 text-white" />
+          <Input name="vehicleDetails" placeholder="Vehicle Details (e.g., 2020 BMW X5)" value={formData.vehicleDetails} onChange={handleInputChange} required className="bg-gray-800 text-white" />
+
+          <label className="block text-white">Additional Services</label>
+          <div className="grid grid-cols-1 gap-2 max-h-40 overflow-y-auto bg-gray-800 p-3 border border-gray-600 rounded">
+            {additionalServices.map(service => (
+              <div key={service} className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id={service}
+                  checked={selectedServices.includes(service)}
+                  onChange={() => handleServiceToggle(service)}
+                  className="rounded border-gray-600 bg-gray-700 text-green-600 focus:ring-green-500"
+                />
+                <label htmlFor={service} className="text-sm text-gray-300 cursor-pointer">
+                  {service}
+                </label>
+              </div>
+            ))}
+          </div>
+
+          <Textarea name="additionalDetails" rows={3} placeholder="Additional Notes" value={formData.additionalDetails} onChange={handleInputChange} className="bg-gray-800 text-white" />
+
+          <Button type="submit" disabled={isSubmitting} className="w-full bg-green-600 hover:bg-green-700 text-white">
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Submitting Request...
+              </>
+            ) : (
+              'Request Booking'
+            )}
+          </Button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default BookingCalendar;
