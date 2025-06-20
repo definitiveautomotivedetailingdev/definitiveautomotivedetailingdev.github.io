@@ -49,4 +49,4 @@ router.post('/bookings/confirm', async (req, res) => {
   }
 });
 
-export default router;
+export default { route: router };

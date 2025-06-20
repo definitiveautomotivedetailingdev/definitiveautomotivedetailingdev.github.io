@@ -13,7 +13,7 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/calendar/(.*)",
       "destination": "/booking-backend/src/server.ts"
     },
     {

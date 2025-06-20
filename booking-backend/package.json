@@ -1,10 +1,10 @@
 {
   "name": "booking-backend",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "src/server.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "ts-node src/server.ts",
     "dev": "ts-node src/server.ts"
   },
   "dependencies": {

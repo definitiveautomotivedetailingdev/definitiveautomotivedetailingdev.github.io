@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/calendar', calendarRoutes);
+app.use('/calendar', calendarRoutes.route);
 
 // Health check
 app.get('/health', (req, res) => {
@@ -23,11 +23,6 @@ app.get('/health', (req, res) => {
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
-});
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
 
 export default app;
