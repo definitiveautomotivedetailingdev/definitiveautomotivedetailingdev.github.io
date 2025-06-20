@@ -1,9 +1,23 @@
 import { google } from 'googleapis';
-import fs from 'fs';
 import { BookingData, CalendarEvent } from './types';
 
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
-const SERVICE_ACCOUNT_KEY = JSON.parse(fs.readFileSync('./key.json', 'utf-8'));
+
+let SERVICE_ACCOUNT_KEY;
+try {
+  if (!process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
+    throw new Error('GOOGLE_SERVICE_ACCOUNT_KEY environment variable is not set');
+  }
+  // Decode Base64 string
+  const decodedKey = Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT_KEY, 'base64').toString('utf-8');
+  SERVICE_ACCOUNT_KEY = JSON.parse(decodedKey);
+  if (!SERVICE_ACCOUNT_KEY.client_email || !SERVICE_ACCOUNT_KEY.private_key) {
+    throw new Error('Invalid GOOGLE_SERVICE_ACCOUNT_KEY: missing client_email or private_key');
+  }
+} catch (error) {
+  console.error('Failed to parse GOOGLE_SERVICE_ACCOUNT_KEY:', error);
+  throw new Error('Invalid service account key configuration');
+}
 
 const auth = new google.auth.JWT({
   email: SERVICE_ACCOUNT_KEY.client_email,
@@ -60,13 +74,13 @@ export const createPendingBooking = async (
       }, null, 2),
       start: {
         dateTime: bookingData.datetime,
-        timeZone: 'America/New_York', // Adjust to your timezone
+        timeZone: 'America/Toronto',
       },
       end: {
         dateTime: new Date(
           new Date(bookingData.datetime).getTime() + 60 * 60 * 1000 // 1-hour slot
         ).toISOString(),
-        timeZone: 'America/New_York',
+        timeZone: 'America/Toronto',
       },
       status: 'tentative',
     };
