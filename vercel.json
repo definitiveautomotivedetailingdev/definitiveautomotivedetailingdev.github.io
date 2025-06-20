@@ -7,7 +7,7 @@
       "config": { "distDir": "dist" }
     },
     {
-      "src": "booking-backend/src/index.ts",
+      "src": "booking-backend/src/server.ts",
       "use": "@vercel/node"
     }
   ],
