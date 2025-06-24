@@ -4,6 +4,12 @@ import { CalendarEventRequest, BookingData } from '../types';
 
 const router = express.Router();
 
+// Log requests for debugging
+router.use((req, res, next) => {
+  console.log(`Calendar route: ${req.method} ${req.originalUrl}`);
+  next();
+});
+
 router.post('/events', async (req, res) => {
   const { calendarId, timeMin, timeMax } = req.body as CalendarEventRequest;
 
@@ -49,4 +55,4 @@ router.post('/bookings/confirm', async (req, res) => {
   }
 });
 
-export default { route: router };
+export default router;

@@ -13,15 +13,16 @@
   ],
   "rewrites": [
     {
-      "source": "/api/calendar/(.*)",
+      "source": "/api/health",
       "destination": "/booking-backend/src/server.ts"
     },
     {
+      "source": "/api/calendar/(.*)",
+      "destination": "/api/calendar/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/frontend/dist/index.html"
+      "destination": "/index.html"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
