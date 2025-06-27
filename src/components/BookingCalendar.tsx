@@ -28,12 +28,12 @@ const toast = ({ title, description, variant }: { title: string; description: st
   }, 5000);
 };
 
-// API Configuration - Replace with your actual values
+// API Configuration
 const API_CONFIG = {
-  // Your backend API endpoint that handles Google Calendar operations
-  BACKEND_API_URL: import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:3001/api',
-  // Your Google Calendar ID (usually your business email or 'primary')
-  CALENDAR_ID: import.meta.env.VITE_CALENDAR_ID || 'your-business-email@gmail.com',
+  // Backend API endpoint that handles Google Calendar operations
+  BACKEND_API_URL: import.meta.env.VITE_BACKEND_API_URL,
+  // Google Calendar ID
+  CALENDAR_ID: import.meta.env.VITE_CALENDAR_ID,
 };
 
 // Business hours configuration
