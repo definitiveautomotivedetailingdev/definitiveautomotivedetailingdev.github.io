@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.use('/api/calendar', calendarRoutes);
 
 // Health check
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   console.log('Health check requested');
   res.status(200).json({ status: 'OK' });
 });
