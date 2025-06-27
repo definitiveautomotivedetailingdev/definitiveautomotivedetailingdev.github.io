@@ -30,8 +30,6 @@ const toast = ({ title, description, variant }: { title: string; description: st
 
 // API Configuration
 const API_CONFIG = {
-  // Backend API endpoint that handles Google Calendar operations
-  BACKEND_API_URL: import.meta.env.VITE_BACKEND_API_URL,
   // Google Calendar ID
   CALENDAR_ID: import.meta.env.VITE_CALENDAR_ID,
 };
@@ -229,7 +227,7 @@ const BookingCalendar = () => {
     const endOfDay = new Date(selectedDate);
     endOfDay.setHours(23, 59, 59, 999);
 
-    const response = await fetch(`${API_CONFIG.BACKEND_API_URL}/calendar/events`, {
+    const response = await fetch(`/api/calendar/events`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -250,7 +248,7 @@ const BookingCalendar = () => {
   };
 
   const createPendingBooking = async (bookingData: any) => {
-    const response = await fetch(`${API_CONFIG.BACKEND_API_URL}/calendar/bookings/create-pending`, {
+    const response = await fetch(`/api/calendar/bookings/create-pending`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
